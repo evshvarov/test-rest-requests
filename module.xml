@@ -12,6 +12,11 @@
           <Version>1.0.*</Version>
         </ModuleReference>
         <ModuleReference>
+          <Name>telegram-adapter</Name>
+          <Version>*</Version>
+        </ModuleReference>
+
+        <ModuleReference>
           <Name>objectscript-json-trace-viewer</Name>
           <Version>1.0.*</Version>
         </ModuleReference>
@@ -21,6 +26,7 @@
       <Resource Directory="i14y" Name="TestLookupTable.LUT"/>
       <Resource Name="dc.Reddit.PKG"/>
       <Resource Name="dc.Demo.PKG"/>
+      <Resource Name="shvarov.i14y.PKG"/>
       <SystemRequirements Version=">=2020.1" Interoperability="enabled" />
     </Module>
   </Document>
