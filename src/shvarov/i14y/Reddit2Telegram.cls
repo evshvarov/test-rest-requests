@@ -8,7 +8,7 @@ Parameter REPORTERRORS = 1;
 Parameter TREATEMPTYREPEATINGFIELDASNULL = 0;
 
 /// Description
-ClassMethod FormJSONForTelegramData(json As %String) As %String
+ClassMethod JSONForTelegramData(json As %String) As %String
 {
     Set res={
             "chat_id": "-1001983366307",
@@ -21,7 +21,7 @@ ClassMethod FormJSONForTelegramData(json As %String) As %String
 XData DTL [ XMLNamespace = "http://www.intersystems.com/dtl" ]
 {
 <transform sourceClass='dc.Demo.PostMessage' targetClass='Telegram.Request' create='new' language='objectscript' >
-<assign value='##class(shvarov.i14y.Reddit2Telegram).FormJSONForTelegramData(source.Post.Selftext)' property='target.Data' action='set' />
+<assign value='..JSONForTelegramData(source.Post.Selftext)' property='target.Data' action='set' />
 <assign value='"sendMessage"' property='target.Method' action='set' />
 </transform>
 }
