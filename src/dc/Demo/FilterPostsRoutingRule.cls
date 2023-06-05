@@ -20,7 +20,7 @@ XData RuleDefinition [ XMLNamespace = "http://www.intersystems.com/rule" ]
 <assign property="Document.ToEmailAddress" value="&quot;cat@company.com&quot;"></assign>
 <assign property="Document.Found" value="&quot;Cat&quot;"></assign>
 <send transform="" target="dc.Demo.FileOperation"></send>
-<send transform="" target="shvarov.i14y.ChatOperation"></send>
+<send transform="shvarov.i14y.Reddit2Telegram" target="shvarov.i14y.ChatOperation"></send>
 <return></return>
 </when>
 <otherwise>
@@ -32,4 +32,3 @@ XData RuleDefinition [ XMLNamespace = "http://www.intersystems.com/rule" ]
 }
 
 }
-
